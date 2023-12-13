@@ -3,28 +3,34 @@
     --background-color: #F7F5F3;
     --text-color: #0D0D0D;
     --nav-background-color: #f5f5f5;
-    --nav-text-color: #333;
+    --nav-text-color: #BBA594;
     --separator-color: #555;
-    --gallery-background-color: #ddd;
+    --gallery-background-color: #F7F5F3;
+    --font-1: 'Playfair Display', serif;
+    --font-2: 'Proxima Nova', serif;
 }
 
 /* Dark mode color variables */
 .dark-mode {
-    --background-color: #0D0D0D;
+    --background-color: #1E1E1E;
     --text-color: #F7F5F3;
     --nav-background-color: #1E1E1E;
     --nav-text-color: #BBA594;
     --separator-color: #BBA594;
-    --gallery-background-color: #2C2C2C;
+    --gallery-background-color: #1E1E1E;
 }
 
 /* Basic Styles for the Landing Page */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-2);
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+h1 {
+    font-family: var(--font-1);
 }
 
 nav {
@@ -112,6 +118,8 @@ input:checked + .slider:before {
     opacity: 1;
     max-height: 100vh; /* Adjust to the maximum height the menu might need */
     transition: opacity 0.3s ease, max-height 0.5s ease;
+    background-color: #1E1E1E;
+    border-radius: 20px;
 }
 
 .nav-links a {
@@ -133,7 +141,7 @@ input:checked + .slider:before {
     display: block;
     height: 3px;
     width: 100%;
-    background: #333;
+    background: var(--nav-text-color);
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -197,6 +205,15 @@ input:checked + .slider:before {
 .active {
     display: block;
     opacity: 1; /* Fade in */
+}
+
+#figma-prototype {
+    width: 100%; /* Full width of the viewport */
+    height: calc(100vh - 60px); /* Full height minus the navbar height */
+    border: none; /* Remove any default border */
+    position: absolute; /* Position it absolutely */
+    top: 60px; /* Height of the navbar */
+    left: 0;
 }
 
 
@@ -355,5 +372,10 @@ input:checked + .slider:before {
     .half-width {
         width: 100%;
         height: 50vh;
+    }
+
+    #figma-prototype {
+        height: calc(100vh - 50px); /* Adjust height for mobile navbar if different */
+        top: 50px; /* Adjust top position for mobile navbar height */
     }
 }
