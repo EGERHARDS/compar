@@ -4,7 +4,7 @@
     --text-color: #0D0D0D;
     --nav-background-color: #f5f5f5;
     --nav-text-color: #BBA594;
-    --separator-color: #555;
+    --separator-color: #8E6F56;
     --gallery-background-color: #F7F5F3;
     --font-1: 'Playfair Display', serif;
     --font-2: 'Proxima Nova', serif;
@@ -15,8 +15,8 @@
     --background-color: #1E1E1E;
     --text-color: #F7F5F3;
     --nav-background-color: #1E1E1E;
-    --nav-text-color: #BBA594;
-    --separator-color: #BBA594;
+    --nav-text-color: #8E6F56;
+    --separator-color: #8E6F56;
     --gallery-background-color: #1E1E1E;
 }
 
@@ -31,6 +31,8 @@ body, html {
 
 h1 {
     font-family: var(--font-1);
+    color: var(--separator-color);
+    font-style: normal;
 }
 
 nav {
@@ -166,7 +168,8 @@ input:checked + .slider:before {
     font-size: 24px; /* Larger font size for emphasis */
     font-style: italic; /* Italicize the quote */
     color: #555; /* A softer color */
-    margin: 40px 0; /* Add some space above and below the separator */
+    margin-top: 0px;
+    margin-bottom: 60px;
 }
 
 .gallery {
@@ -223,8 +226,51 @@ input:checked + .slider:before {
     left: 20px;
     color: white;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
+}
+
+.text-overlay h2 {
+    font-family: var(--font-1);
+    font-size: 44pt;
+}
+
+.text-overlay button {
+    border-radius: 30px;
+    border-color: white;
+    background: none;
+    color: white;
+    font-family: var(--font-2);
+    font-size: 14pt;
+    padding: 10px;
+    margin: 5px;
+    border-style: solid;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text-overlay button:hover {
+    background-color: white;
+    color: var(--nav-text-color)
+}
+
+button.sign-up-2 {
+    border-radius: 30px;
+    border-color: white;
+    border-color: var(--separator-color);
+    background: none;
+    color: var(--separator-color);
+    font-family: var(--font-2);
+    font-size: 14pt;
+    padding: 10px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+}
+
+button.sign-up-2:hover {
+    background-color: var(--separator-color);
+    color: var(--nav-background-color)
 }
 
 .prev, .next {
@@ -272,6 +318,11 @@ input:checked + .slider:before {
     flex-direction: column;
 }
 
+p {
+    padding: 40px;
+    color: var(--separator-color);
+}
+
 .image {
     background-color: #ddd;
     overflow: hidden;
@@ -298,7 +349,7 @@ input:checked + .slider:before {
 
 .text {
     font-size: 20px;
-    color: #333;
+    color: var(--text-color);
 }
 
 /* Hover Effects and Transitions */
@@ -315,6 +366,119 @@ input:checked + .slider:before {
 .full-screen:hover .text {
     transform: translateY(-10px);
 }
+
+footer {
+    background-color: var(--separator-color); /* Use your preferred color */
+    color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start for vertical alignment */
+}
+
+.left-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+     /* Move the logo 100px to the left */
+}
+
+.signup-button {
+    border-radius: 30px;
+    border-color: white;
+    background: none;
+    color: white;
+    font-family: var(--font-2);
+    font-size: 14pt;
+    padding: 10px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+}
+
+
+.social-media-links {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-end; /* Align items to the end */
+}
+
+.social-media-links h1 {
+    margin-bottom: 10px; /* Space between text and icons */
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    height: 30px; /* Adjust size as needed */
+    width: auto;
+}
+
+.signup-page {
+    text-align: center;
+    padding: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 60px;
+    height: 50vh
+}
+
+.signup-page button.sign-up {
+    border-radius: 30px;
+    border-color: var(--separator-color);
+    background: none;
+    color: var(--separator-color);
+    font-family: var(--font-2);
+    font-size: 14pt;
+    padding: 10px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+}
+
+.signup-page button.sign-up:hover {
+    background-color: var(--separator-color);
+    color: var(--nav-background-color);
+    cursor: pointer;
+}
+
+.signup-page input[type="email"] {
+    border-radius: 30px; /* Match the button's border-radius */
+    border: 1px solid var(--separator-color); /* Match the button's border color */
+    color: var(--separator-color); /* Match the button's text color */
+    font-family: var(--font-2); /* Match the button's font */
+    font-size: 14pt; /* Match the button's font size */
+    padding: 10px; /* Match the button's padding */
+    margin: 5px; /* Match the button's margin */
+    background: none; /* Match the button's background */
+    outline: none; /* Optional: Removes the default focus outline */
+    width: calc(100% - 48px); /* Adjust width as needed, accounting for padding and margin */
+}
+
+/* Optional: Style for focus state */
+.signup-page input[type="email"]:focus {
+    border-color: darken(var(--separator-color), 10%); /* Optional: Darken the border on focus */
+}
+
 
 /* Media Query for Mobile View */
 @media (max-width: 768px) {

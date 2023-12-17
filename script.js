@@ -112,4 +112,16 @@ document.addEventListener("DOMContentLoaded", function () {
           }
       });
   }
+
+// Navbar slide functionality
+let lastScrollTop = 0;
+window.addEventListener("scroll", function() {
+    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScrollTop) {
+        document.querySelector("nav").style.top = "-105px"; // Adjust based on navbar height
+    } else {
+        document.querySelector("nav").style.top = "0";
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);
 });

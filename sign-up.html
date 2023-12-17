@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ttb1sbp.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sign Up - Beauty-Tech App</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo-and-toggle">
+        <div class="logo">
+          <a href="index.html"
+            ><img class="main-logo" src="imgs/compar.png" alt="compar-logo"
+          /></a>
+        </div>
+        <label class="dark-mode-switch">
+          <input type="checkbox" id="dark-mode-toggle" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="burger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links">
+        <a href="prototype.html">App prototype</a>
+        <a href="#">Full report</a>
+        <a href="https://www.compar.app/" class="external-link" target="_blank"
+          >Official website</a
+        >
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <main class="signup-page">
+      <h1>Join Our Newsletter</h1>
+      <p>Stay updated with the latest news and updates from Compar.</p>
+      <form
+        action="https://formspree.io/f/mwkgevwo?next=/thank-you.html"
+        method="POST"
+      >
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Enter your email"
+        />
+        <button type="submit" class="sign-up">Sign Up</button>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="left-footer">
+          <div class="logo">
+            <a href="index.html"
+              ><img
+                class="main-logo"
+                src="imgs/compar-logo.png"
+                alt="compar-logo"
+            /></a>
+          </div>
+          <button class="signup-button">Sign up</button>
+        </div>
+        <div class="social-media-links">
+          <h1>Follow us:</h1>
+          <div class="social-icons">
+            <a href="your-linkedin-url" target="_blank"
+              ><img src="imgs/icons8-linkedin-24.png" alt="LinkedIn"
+            /></a>
+            <a href="your-facebook-url" target="_blank"
+              ><img src="imgs/icons8-facebook-24 (1).png" alt="Facebook"
+            /></a>
+            <a href="your-tiktok-url" target="_blank"
+              ><img src="imgs/icons8-tiktok-24.png" alt="TikTok"
+            /></a>
+            <a href="your-instagram-url" target="_blank"
+              ><img src="imgs/icons8-instagram-24.png" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
