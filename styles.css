@@ -102,6 +102,10 @@ nav {
     border-radius: 50%;
 }
 
+#sun-icon, #moon-icon {
+    margin-left: 5px;
+}
+
 input:checked + .slider {
     background-color: var(--nav-text-color);
 }
@@ -172,6 +176,17 @@ input:checked + .slider:before {
     margin-bottom: 60px;
 }
 
+.separator2 {
+    text-justify: center;
+    color: var(--separator-color);
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add some vertical padding */
+    font-size: 24px; /* Larger font size for emphasis */
+    color: #555; /* A softer color */
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
 .gallery {
     position: relative;
     overflow: hidden;
@@ -215,7 +230,7 @@ input:checked + .slider:before {
     height: calc(100vh - 60px); /* Full height minus the navbar height */
     border: none; /* Remove any default border */
     position: absolute; /* Position it absolutely */
-    top: 60px; /* Height of the navbar */
+    top: 500px; /* Height of the navbar */
     left: 0;
 }
 
@@ -250,7 +265,8 @@ input:checked + .slider:before {
 
 .text-overlay button:hover {
     background-color: white;
-    color: var(--nav-text-color)
+    color: var(--nav-text-color);
+    cursor: pointer;
 }
 
 button.sign-up-2 {
@@ -270,7 +286,8 @@ button.sign-up-2 {
 
 button.sign-up-2:hover {
     background-color: var(--separator-color);
-    color: var(--nav-background-color)
+    color: var(--nav-background-color);
+    cursor: pointer;
 }
 
 .prev, .next {
@@ -295,6 +312,7 @@ button.sign-up-2:hover {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
 }
 
 
@@ -361,6 +379,7 @@ p {
 .nav-links a:hover {
     color: #555;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .full-screen:hover .text {
@@ -477,6 +496,12 @@ footer {
 /* Optional: Style for focus state */
 .signup-page input[type="email"]:focus {
     border-color: darken(var(--separator-color), 10%); /* Optional: Darken the border on focus */
+}
+
+.signup-button:hover {
+    cursor: pointer;
+    color: var(--separator-color);
+    background-color: white;
 }
 
 

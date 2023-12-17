@@ -1,4 +1,3 @@
-// JavaScript for Smooth Scrolling, Hover Effects, Gallery, Burger Menu, and External Link Confirmation
 document.addEventListener("DOMContentLoaded", function () {
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -24,15 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to toggle the burger menu
   const burger = document.querySelector('.burger-menu');
   const links = document.querySelector('.nav-links');
-  burger.addEventListener('click', toggleMenu);
-
-  function toggleMenu() {
+  burger.addEventListener('click', function() {
       var navbarHeight = document.querySelector('nav').offsetHeight;
       links.style.top = navbarHeight + 'px';
-      burger.classList.toggle('open');
+      this.classList.toggle('open');
       links.classList.toggle('open');
       document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
-  }
+  });
 
   // Gallery slider functionality
   let slideIndex = 0;
@@ -84,20 +81,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Dark mode toggle functionality
   const darkModeToggle = document.querySelector('#dark-mode-toggle');
+  const sunIcon = document.querySelector('#sun-icon');
+  const moonIcon = document.querySelector('#moon-icon');
+
+  const updateIcons = () => {
+      if (darkModeToggle.checked) {
+          sunIcon.style.display = 'none';
+          moonIcon.style.display = 'inline';
+      } else {
+          sunIcon.style.display = 'inline';
+          moonIcon.style.display = 'none';
+      }
+  };
 
   darkModeToggle.addEventListener('change', () => {
       document.body.classList.toggle('dark-mode');
+      updateIcons();
       localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
   });
 
+  // Initialize the icons based on the current state
   if (localStorage.getItem('darkMode') === 'true') {
       document.body.classList.add('dark-mode');
       darkModeToggle.checked = true;
   }
+  updateIcons();
 
   // External link confirmation
   const externalLink = document.querySelector('.external-link');
-
   if (externalLink) {
       externalLink.addEventListener('click', function (e) {
           e.preventDefault(); // Prevent the default link behavior
@@ -113,15 +124,15 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-// Navbar slide functionality
-let lastScrollTop = 0;
-window.addEventListener("scroll", function() {
-    var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > lastScrollTop) {
-        document.querySelector("nav").style.top = "-105px"; // Adjust based on navbar height
-    } else {
-        document.querySelector("nav").style.top = "0";
-    }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-}, false);
+  // Navbar slide functionality
+  let lastScrollTop = 0;
+  window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+          document.querySelector("nav").style.top = "-105px"; // Adjust based on navbar height
+      } else {
+          document.querySelector("nav").style.top = "0";
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }, false);
 });
