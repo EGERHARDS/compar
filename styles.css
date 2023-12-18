@@ -501,21 +501,21 @@ footer {
     margin: 0 auto;
     margin-top: 100px;
     padding: 20px;
-    display: flex; /* Use flexbox to align items in a row */
-    justify-content: space-around; /* Space out the items evenly */
-    align-items: start; /* Align items to the start of the container */
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
 }
 
 .contact-container h1 {
     font-family: 'Playfair Display', serif;
     color: var(--separator-color);
     margin-bottom: 40px;
-    width: 100%; /* Full width to separate title from sections */
+    width: 100%;
     text-align: center;
 }
 
 .contact-section {
-    width: 30%; /* Each section takes up a third of the container */
+    width: 30%;
     margin-bottom: 30px;
     border-style: solid;
     border-color: var(--separator-color);
@@ -542,8 +542,8 @@ footer {
 
 .contact-section a {
     font-family: 'Proxima Nova', sans-serif;
-    background-color: var(--separator-color); /* Green background */
-    color: white; /* White text */
+    background-color: var(--separator-color);
+    color: white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -554,7 +554,7 @@ footer {
 
 .contact-section a:hover {
     background-color: white;
-    color: var(--separator-color) ;/* Darker green background on hover */
+    color: var(--separator-color) ;
 }
 
 
