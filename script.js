@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -9,18 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  // Hover effects for text elements
   const textElements = document.querySelectorAll(".text");
   textElements.forEach((el) => {
       el.addEventListener("mouseover", function () {
-          this.style.color = "#555"; // Change text color on hover
+          this.style.color = "#555";
       });
       el.addEventListener("mouseout", function () {
-          this.style.color = ""; // Revert text color on mouse out
+          this.style.color = "";
       });
   });
 
-  // Function to toggle the burger menu
   const burger = document.querySelector('.burger-menu');
   const links = document.querySelector('.nav-links');
   burger.addEventListener('click', function() {
@@ -31,14 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Gallery slider functionality
   let slideIndex = 0;
   let slides = document.getElementsByClassName("slide");
   let timer = null;
 
   function initGallery() {
-      showSlide(slideIndex); // Show the first slide
-      timer = setTimeout(nextSlide, 5000); // Set timer for the next slide
+      showSlide(slideIndex);
+      timer = setTimeout(nextSlide, 5000);
   }
 
   function nextSlide() {
@@ -46,12 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showSlide(n) {
-      clearTimeout(timer); // Clear existing timer
+      clearTimeout(timer);
 
-      // Normalize the slide index
       let nextIndex = (n + slides.length) % slides.length;
 
-      // Fade out the current slide and fade in the next slide
       if (slides[slideIndex]) {
           slides[slideIndex].style.opacity = 0;
       }
@@ -60,10 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
           slides[nextIndex].style.opacity = 1;
       }, 50);
 
-      // Update the slide index
       slideIndex = nextIndex;
 
-      // Set a new timer
       timer = setTimeout(nextSlide, 5000);
   }
 
@@ -79,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initGallery();
 
-  // Dark mode toggle functionality
   const darkModeToggle = document.querySelector('#dark-mode-toggle');
   const sunIcon = document.querySelector('#sun-icon');
   const moonIcon = document.querySelector('#moon-icon');
@@ -100,36 +91,31 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
   });
 
-  // Initialize the icons based on the current state
   if (localStorage.getItem('darkMode') === 'true') {
       document.body.classList.add('dark-mode');
       darkModeToggle.checked = true;
   }
   updateIcons();
 
-  // External link confirmation
   const externalLink = document.querySelector('.external-link');
   if (externalLink) {
       externalLink.addEventListener('click', function (e) {
-          e.preventDefault(); // Prevent the default link behavior
-          const url = this.href; // Store the URL
+          e.preventDefault();
+          const url = this.href;
 
-          // Show confirmation dialog
           const userResponse = confirm("You are being redirected to an external website. Do you want to continue?");
 
-          // Redirect based on user response
           if (userResponse) {
               window.open(url, '_blank');
           }
       });
   }
 
-  // Navbar slide functionality
   let lastScrollTop = 0;
   window.addEventListener("scroll", function() {
       var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
       if (currentScroll > lastScrollTop) {
-          document.querySelector("nav").style.top = "-105px"; // Adjust based on navbar height
+          document.querySelector("nav").style.top = "-105px";
       } else {
           document.querySelector("nav").style.top = "0";
       }

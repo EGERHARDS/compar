@@ -1,4 +1,3 @@
-/* Define color variables for light mode */
 :root {
     --background-color: #F7F5F3;
     --text-color: #0D0D0D;
@@ -10,7 +9,6 @@
     --font-2: 'Proxima Nova', serif;
 }
 
-/* Dark mode color variables */
 .dark-mode {
     --background-color: #1E1E1E;
     --text-color: #F7F5F3;
@@ -20,7 +18,6 @@
     --gallery-background-color: #1E1E1E;
 }
 
-/* Basic Styles for the Landing Page */
 body, html {
     margin: 0;
     padding: 0;
@@ -63,7 +60,6 @@ nav {
     padding-top: 10px;
 }
 
-/* Dark Mode Toggle Switch */
 .dark-mode-switch {
     position: relative;
     display: inline-block;
@@ -115,14 +111,14 @@ input:checked + .slider:before {
 }
 
 .nav-links {
-    display: flex; /* Default display for desktop */
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-links.open {
     opacity: 1;
-    max-height: 100vh; /* Adjust to the maximum height the menu might need */
+    max-height: 100vh;
     transition: opacity 0.3s ease, max-height 0.5s ease;
     background-color: #1E1E1E;
     border-radius: 20px;
@@ -167,11 +163,11 @@ input:checked + .slider:before {
 .separator {
     text-justify: center;
     color: var(--separator-color);
-    text-align: center; /* Center the text */
-    padding: 20px 0; /* Add some vertical padding */
-    font-size: 24px; /* Larger font size for emphasis */
-    font-style: italic; /* Italicize the quote */
-    color: #555; /* A softer color */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-style: italic;
+    color: #555;
     margin-top: 0px;
     margin-bottom: 60px;
 }
@@ -179,10 +175,10 @@ input:checked + .slider:before {
 .separator2 {
     text-justify: center;
     color: var(--separator-color);
-    text-align: center; /* Center the text */
-    padding: 20px 0; /* Add some vertical padding */
-    font-size: 24px; /* Larger font size for emphasis */
-    color: #555; /* A softer color */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    color: #555;
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -192,19 +188,18 @@ input:checked + .slider:before {
     overflow: hidden;
     background-color: var(--gallery-background-color);
     width: 100%;
-    height: 100vh; /* Full screen height */
-    top: -60px; /* Adjust if navbar height is different */
-    margin-top: 60px; /* Same as navbar height */
+    height: 100vh;
+    top: -60px;
+    margin-top: 60px;
 }
 
 .gallery .slide {
-    border-radius: 20px; /* Adjust the radius as needed */
-    overflow: hidden; /* Ensures the image respects the border radius */
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-/* Rounded corners for other image components */
 .image, .image img {
-    border-radius: 20px; /* Adjust the radius as needed */
+    border-radius: 20px;
 }
 
 .slide {
@@ -213,24 +208,24 @@ input:checked + .slider:before {
     height: 100%;
     background-size: cover;
     background-position: center;
-    position: absolute; /* Position slides absolutely within the gallery */
+    position: absolute;
     top: 0;
     left: 0;
-    opacity: 0; /* Start with slides hidden */
-    transition: opacity 1s ease-in-out; /* Smooth transition for the fade effect */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .active {
     display: block;
-    opacity: 1; /* Fade in */
+    opacity: 1;
 }
 
 #figma-prototype {
-    width: 100%; /* Full width of the viewport */
-    height: calc(100vh - 60px); /* Full height minus the navbar height */
-    border: none; /* Remove any default border */
-    position: absolute; /* Position it absolutely */
-    top: 500px; /* Height of the navbar */
+    width: 100%;
+    height: calc(100vh - 60px);
+    border: none;
+    position: absolute;
+    top: 500px;
     left: 0;
 }
 
@@ -370,7 +365,6 @@ p {
     color: var(--text-color);
 }
 
-/* Hover Effects and Transitions */
 
 * {
     transition: all 0.3s ease;
@@ -387,7 +381,7 @@ p {
 }
 
 footer {
-    background-color: var(--separator-color); /* Use your preferred color */
+    background-color: var(--separator-color);
     color: white;
     padding: 50px;
     display: flex;
@@ -397,18 +391,17 @@ footer {
 
 .footer-content {
     width: 100%;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the start for vertical alignment */
+    align-items: flex-start;
 }
 
 .left-footer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
-     /* Move the logo 100px to the left */
+    align-items: flex-start;
 }
 
 .signup-button {
@@ -428,12 +421,12 @@ footer {
 
 .social-media-links {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-end; /* Align items to the end */
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .social-media-links h1 {
-    margin-bottom: 10px; /* Space between text and icons */
+    margin-bottom: 10px;
     color: white;
 }
 
@@ -447,7 +440,7 @@ footer {
 }
 
 .social-icons img {
-    height: 30px; /* Adjust size as needed */
+    height: 30px;
     width: auto;
 }
 
@@ -481,21 +474,20 @@ footer {
 }
 
 .signup-page input[type="email"] {
-    border-radius: 30px; /* Match the button's border-radius */
-    border: 1px solid var(--separator-color); /* Match the button's border color */
-    color: var(--separator-color); /* Match the button's text color */
-    font-family: var(--font-2); /* Match the button's font */
-    font-size: 14pt; /* Match the button's font size */
-    padding: 10px; /* Match the button's padding */
-    margin: 5px; /* Match the button's margin */
-    background: none; /* Match the button's background */
-    outline: none; /* Optional: Removes the default focus outline */
-    width: calc(100% - 48px); /* Adjust width as needed, accounting for padding and margin */
+    border-radius: 30px;
+    border: 1px solid var(--separator-color);
+    color: var(--separator-color);
+    font-family: var(--font-2);
+    font-size: 14pt;
+    padding: 10px;
+    margin: 5px;
+    background: none;
+    outline: none;
+    width: calc(100% - 48px);
 }
 
-/* Optional: Style for focus state */
 .signup-page input[type="email"]:focus {
-    border-color: darken(var(--separator-color), 10%); /* Optional: Darken the border on focus */
+    border-color: darken(var(--separator-color), 10%);
 }
 
 .signup-button:hover {
@@ -504,8 +496,68 @@ footer {
     background-color: white;
 }
 
+.contact-container {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: space-around; /* Space out the items evenly */
+    align-items: start; /* Align items to the start of the container */
+}
 
-/* Media Query for Mobile View */
+.contact-container h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--separator-color);
+    margin-bottom: 40px;
+    width: 100%; /* Full width to separate title from sections */
+    text-align: center;
+}
+
+.contact-section {
+    width: 30%; /* Each section takes up a third of the container */
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: var(--separator-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.contact-section:hover {
+    background-color: white;
+}
+
+.contact-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--separator-color);
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-section a {
+    font-family: 'Proxima Nova', sans-serif;
+    background-color: var(--separator-color); /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.contact-section a:hover {
+    background-color: white;
+    color: var(--separator-color) ;/* Darker green background on hover */
+}
+
+
 @media (max-width: 768px) {
     .burger-menu {
         display: flex;
@@ -513,7 +565,7 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 60px; /* Adjust based on the height of your navbar */
+        top: 60px;
         left: 0;
         right: 0;
         max-height: 0;
@@ -530,23 +582,23 @@ footer {
 
     .nav-links.open {
         opacity: 1;
-        max-height: 100vh; /* Adjust to the maximum height the menu might need */
+        max-height: 100vh;
         visibility: visible;
         transition: opacity 0.3s ease, max-height 0.5s ease;
     }
 
     .nav-links a {
         color: white;
-        margin: 15px 0; /* Spacing between links */
+        margin: 15px 0;
         font-size: 20px;
         text-align: center;
-        width: 100%; /* Full width for better touch targets */
-        padding: 10px; /* Padding for each link */
+        width: 100%;
+        padding: 10px;
     }
 
     .separator {
-        font-size: 18px; /* Slightly smaller font size for mobile */
-        padding: 15px 10px; /* Adjust padding for smaller screens */
+        font-size: 18px;
+        padding: 15px 10px;
     }
 
     .full-screen {
@@ -564,7 +616,23 @@ footer {
     }
 
     #figma-prototype {
-        height: calc(100vh - 50px); /* Adjust height for mobile navbar if different */
-        top: 50px; /* Adjust top position for mobile navbar height */
+        height: calc(100vh - 50px);
+        top: 50px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .left-footer, .social-media-links {
+        text-align: center;
     }
 }

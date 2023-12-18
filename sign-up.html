@@ -9,37 +9,33 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/ttb1sbp.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Sign Up - Beauty-Tech App</title>
+    <title>Sign Up | compar - Your AI Beauty Ally</title>
   </head>
   <body>
     <nav>
       <div class="logo-and-toggle">
-        <div class="logo">
-          <a href="index.html"
-            ><img class="main-logo" src="imgs/compar.png" alt="compar-logo"
-          /></a>
-        </div>
-        <label class="dark-mode-switch">
-          <input type="checkbox" id="dark-mode-toggle" />
-          <span class="slider round"></span>
-        </label>
+          <div class="logo"><a href="index.html"><img class="main-logo" src="imgs/compar.png" alt="compar-logo"></a></div>
+          <label class="dark-mode-switch">
+              <input type="checkbox" id="dark-mode-toggle">
+              <span class="slider round"></span>
+          </label>
+          <i id="sun-icon" class="fas fa-sun" style="display: none;"></i> <!-- Sun icon -->
+          <i id="moon-icon" class="fas fa-moon" style="display: none;"></i> <!-- Moon icon -->
       </div>
       <div class="burger-menu" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
       </div>
       <div class="nav-links">
-        <a href="prototype.html">App prototype</a>
-        <a href="#">Full report</a>
-        <a href="https://www.compar.app/" class="external-link" target="_blank"
-          >Official website</a
-        >
-        <a href="#">Contact</a>
-      </div>
-    </nav>
+        <a href="prototype.html">App preview</a>
+        <a href="https://www.compar.app/" class="external-link" target="_blank">Official website</a>
+        <a href="contact.html">Contact</a>
+    </div>
+  </nav>    
 
     <main class="signup-page">
       <h1>Join Our Newsletter</h1>
@@ -79,5 +75,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="dark-mode.js"></script>
+    <script src="alert.js"></script>
   </body>
 </html>
